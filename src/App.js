@@ -1,24 +1,14 @@
 import React from 'react';
 import './App.css';
 import SystemComponent from './Components/SystemComponent';
-import JobComponent from './Components/JobComponent';
 import PieChartComponent from './Components/PieChartComponent';
 import LineGraphComponent from './Components/LineGraphComponent';
 import TestComponent from "./Components/TestComponent";
+import Job from "./Containers/Job"
 
 
 function App() {
-        const job = {
-        suiteName: "Suite Name",
-        environment: "Environment",
-        jobName: "Job Name",
-        date: "Date",
-        totalDuration: "Total Duration",
-        totalTests: "Total JobComponent",
-        passedTests: "Passed JobComponent",
-        failedTests: "Failed JobComponent",
-        percentPassed: "Percent Passed"
-    };
+
 
     const test = {
         class: "Class",
@@ -40,7 +30,7 @@ function App() {
                 </div>
             </div>
             <div className={"tableContainer"}>
-                <JobComponent job={job}/>
+                <Job />
                 <TestComponent test={test}/>
             </div>
         </div>
