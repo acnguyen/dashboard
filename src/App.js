@@ -1,26 +1,34 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import System from './System';
+import Tests from './Tests';
+import PieChart from './PieChart';
+import LineGraph from './LineGraph';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        const job = {
+        suiteName: "Suite Name",
+        environment: "Environment",
+        jobName: "Job Name",
+        date: "Date",
+        totalDuration: "Total Duration",
+        totalTests: "Total Tests",
+        passedTests: "Passed Tests",
+        failedTests: "Failed Tests",
+        percentPassed: "Percent Passed"
+    };
+
+        return (
+        <div className={"container"}>
+            <h1>Header</h1>
+            <System system={{systemName: "System Name"}}/>
+            <PieChart/>
+            <LineGraph/>
+            <Tests job={job}/>
+        </div>
+        )
 }
 
 export default App;
