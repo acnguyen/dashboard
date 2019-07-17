@@ -11,8 +11,9 @@
 # production
 /build
 
-#idea
-.idea/
+# WebStorm IDEA folder
+.idea/*
+*.iml
 
 # misc
 .DS_Store
