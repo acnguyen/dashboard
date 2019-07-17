@@ -1,10 +1,10 @@
 import React from 'react';
 
-function PieChart() {
+function PieChartComponent() {
     return (
         <div>
             <h2>Pie Chart</h2>
         </div>
     );
 }
-export default PieChart;
+export default PieChartComponent;

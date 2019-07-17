@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import System from './System';
-import Tests from './Tests';
-import PieChart from './PieChart';
-import LineGraph from './LineGraph';
+import SystemComponent from './Components/SystemComponent';
+import JobComponent from './Components/JobComponent';
+import PieChartComponent from './Components/PieChartComponent';
+import LineGraphComponent from './Components/LineGraphComponent';
+import TestComponent from "./Components/TestComponent";
 
 
 function App() {
@@ -14,19 +14,29 @@ function App() {
         jobName: "Job Name",
         date: "Date",
         totalDuration: "Total Duration",
-        totalTests: "Total Tests",
-        passedTests: "Passed Tests",
-        failedTests: "Failed Tests",
+        totalTests: "Total JobComponent",
+        passedTests: "Passed JobComponent",
+        failedTests: "Failed JobComponent",
         percentPassed: "Percent Passed"
+    };
+
+    const test = {
+        class: "class",
+        method: "method",
+        result: "result",
+        error: "error",
+        screenShot: "screenShot",
+        date: "date",
     };
 
         return (
         <div className={"container"}>
             <h1>Header</h1>
-            <System system={{systemName: "System Name"}}/>
-            <PieChart/>
-            <LineGraph/>
-            <Tests job={job}/>
+            <SystemComponent system={{systemName: "SystemComponent Name"}}/>
+            <PieChartComponent/>
+            <LineGraphComponent/>
+            <JobComponent job={job}/>
+            <TestComponent test={test}/>
         </div>
         )
 }

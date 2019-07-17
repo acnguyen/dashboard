@@ -1,6 +1,6 @@
 import React from 'react';
 
-function System(props) {
+function SystemComponent(props) {
     console.log(props);
     return (
         <div>
@@ -8,4 +8,4 @@ function System(props) {
         </div>
     );
 }
-export default System;
+export default SystemComponent;

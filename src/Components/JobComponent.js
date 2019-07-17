@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 
-function Tests(props) {
+function JobComponent(props) {
     console.log(props);
 
     return (
         <div>
-            <h2>Tests</h2>
+            <h2>Jobs</h2>
             <table >
                 <tr>
                     <th>{props.job.suiteName}</th>
@@ -27,4 +27,4 @@ function Tests(props) {
         </div>
     );
 }
-export default Tests;
+export default JobComponent;
