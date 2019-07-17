@@ -6,7 +6,7 @@ function JobComponent(props) {
 
     return (
         <div>
-            <h2>Jobs</h2>
+            <h2 className={"header"}>Jobs</h2>
             <table >
                 <tr>
                     <th>{props.job.suiteName}</th>

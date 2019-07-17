@@ -21,22 +21,28 @@ function App() {
     };
 
     const test = {
-        class: "class",
-        method: "method",
-        result: "result",
-        error: "error",
-        screenShot: "screenShot",
-        date: "date",
+        class: "Class",
+        method: "Method",
+        result: "Result",
+        error: "Error",
+        screenShot: "ScreenShot",
+        date: "Date",
     };
 
         return (
-        <div className={"container"}>
-            <h1>Header</h1>
-            <SystemComponent system={{systemName: "SystemComponent Name"}}/>
-            <PieChartComponent/>
-            <LineGraphComponent/>
-            <JobComponent job={job}/>
-            <TestComponent test={test}/>
+        <div>
+            <div className={"appContainer"}>
+                <h1 className={"header"}>Header</h1>
+                <SystemComponent system={{systemName: "SystemComponent Name"}}/>
+                <div className={"chartContainer"}>
+                    <PieChartComponent/>
+                    <LineGraphComponent/>
+                </div>
+            </div>
+            <div className={"tableContainer"}>
+                <JobComponent job={job}/>
+                <TestComponent test={test}/>
+            </div>
         </div>
         )
 }

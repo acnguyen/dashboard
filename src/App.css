@@ -5,53 +5,85 @@ table, th, td {
 
 }
 
-th {
-    color: white;
-}
-
-.container {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    grid-gap: 3px ;
-}
-
-.container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: #ffeead;
-}
+/*th {*/
+/*    color: white;*/
+/*}*/
 
 html, body {
     background-color: #ffeead;
     margin: 10px;
 }
 
-.container > div:nth-child(1n) {
+.appContainer {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-gap: 3px ;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*font-size: 2em;*/
+    color: #ffeead;
+}
+
+/*.container > div {*/
+/*    display: flex;*/
+/*    !*justify-content: center;*!*/
+/*    !*align-items: center;*!*/
+/*    !*font-size: 2em;*!*/
+/*    color: #ffeead;*/
+/*}*/
+
+.appContainer > div:nth-child(1n) {
     background-color: #96ceb4;
 }
 
-.container > div:nth-child(2n) {
-    background-color: #88d8b0;
+/*.appContainer > div:nth-child(2n) {*/
+/*    background-color: #88d8b0;*/
+/*}*/
+
+/*.appContainer > div:nth-child(3n) {*/
+/*    background-color: #ff6f69;*/
+/*}*/
+
+/*.appContainer > div:nth-child(4n) {*/
+/*    background-color: #ffcc5c;*/
+/*}*/
+
+.chartContainer {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 3px ;
 }
 
-.container > div:nth-child(3n) {
-    background-color: #ff6f69;
+.chartContainer > div:nth-child(1n) {
+    background-color: grey;
 }
 
-.container > div:nth-child(4n) {
-    background-color: #ffcc5c;
+.chartContainer > div:nth-child(2n) {
+    background-color: grey;
 }
 
-h1 {
+.tableContainer {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 3px;
+    padding: 3px;
+
+}
+
+.tableContainer > div:nth-child(1n) {
+    background-color: orange;
+}
+
+.tableContainer > div:nth-child(2n) {
+    background-color: orange;
+}
+
+.header {
     /*display: flex;*/
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3; /* 1 is the starting column line, 3 is the ending column line */
     text-align: center;
     color: white;
     background: #6441A5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
