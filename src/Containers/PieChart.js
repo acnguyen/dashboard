@@ -1,9 +1,10 @@
 import React from 'react';
+import PieChartComponent from "../Components/PieChartComponent";
 
 class PieChart extends React.Component {
     render() {
         return (
-            <h1> Job Container</h1>
+            <PieChartComponent/>
         )
     }
 }
