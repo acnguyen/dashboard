@@ -1,9 +1,10 @@
 import React from 'react';
+import LineGraphComponent from "../Components/LineGraphComponent";
 
 class LineGraph extends React.Component {
     render() {
         return (
-            <h1> Job Container</h1>
+            <LineGraphComponent/>
         )
     }
 }
