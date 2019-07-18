@@ -1,37 +1,27 @@
 import React from 'react';
 import './App.css';
-import SystemComponent from './Components/SystemComponent';
-import PieChartComponent from './Components/PieChartComponent';
-import LineGraphComponent from './Components/LineGraphComponent';
-import TestComponent from "./Components/TestComponent";
+import PieChart from './Containers/PieChart';
+import LineGraph from './Containers/LineGraph';
+import Test from "./Containers/Test";
 import Job from "./Containers/Job"
+import System from "./Containers/System";
 
 
 function App() {
-
-
-    const test = {
-        class: "Class",
-        method: "Method",
-        result: "Result",
-        error: "Error",
-        screenShot: "ScreenShot",
-        date: "Date",
-    };
 
         return (
         <div>
             <div className={"appContainer"}>
                 <h1 className={"header"}>Header</h1>
-                <SystemComponent system={{systemName: "SystemComponent Name"}}/>
+                <System />
                 <div className={"chartContainer"}>
-                    <PieChartComponent/>
-                    <LineGraphComponent/>
+                    <PieChart />
+                    <LineGraph />
                 </div>
             </div>
             <div className={"tableContainer"}>
                 <Job />
-                <TestComponent test={test}/>
+                <Test />
             </div>
         </div>
         )
