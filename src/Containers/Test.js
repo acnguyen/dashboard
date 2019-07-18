@@ -1,9 +1,19 @@
 import React from 'react';
+import TestComponent from "../Components/TestComponent";
 
 class Test extends React.Component {
     render() {
+        const test = {
+            class: "Class",
+            method: "Method",
+            result: "Result",
+            error: "Error",
+            screenShot: "ScreenShot",
+            date: "Date",
+        };
+
         return (
-            <h1> Job Container</h1>
+            <TestComponent test={test}/>
         )
     }
 }
