@@ -1,29 +1,43 @@
 import React from 'react';
 import '../App.css';
+import Table from 'rc-table';
+import styled from 'styled-components';
+import 'rc-table/assets/index.css'
 
 function JobComponent(props) {
     console.log(props);
 
+    const columns = [{
+        title: 'Name', dataIndex: 'name', key:'name', width: 100,
+    }, {
+        title: 'Height', dataIndex: 'Height', key:'Height', width: 100,
+    }, {
+        title: 'Mass', dataIndex: 'Mass', key:'Mass', width: 200,
+    }, {
+        title: 'Hair_color', dataIndex: 'Hair_color', key:'Hair_color',
+    }];
+
+    const data = [
+        { name: props.character.name, age: 28, address: 'some where', key:'1' },
+
+    ];
+
+    const BodyRow = styled.tr`
+  &:hover {
+    background: lightblue !important;
+  }
+`;
+
+    const components = {
+        body: {
+            row: BodyRow,
+        },
+    };
+
     return (
         <div>
-            <h2 className={"header"}>Jobs</h2>
-            <table >
-                <tr>
-                    <th>{props.job.suiteName}</th>
-                    <th>{props.job.environment}</th>
-                    <th>{props.job.jobName}</th>
-                    <th>{props.job.date}</th>
-                    <th>{props.job.totalDuration}</th>
-                    <th>{props.job.totalTests}</th>
-                    <th>{props.job.passedTests}</th>
-                    <th>{props.job.failedTests}</th>
-                    <th>{props.job.percentPassed}</th>
-                </tr>
-                <tr>
-                    <td>Smoke</td>
-                    <td>int05</td>
-                </tr>
-            </table>
+            <p>{props.character.name}</p>
+            <Table columns={columns} data={data} components={components} />
         </div>
     );
 }

@@ -2,21 +2,36 @@ import React from 'react';
 import JobComponent from '../Components/JobComponent';
 
 class Job extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            loading: false,
+            peopleArray: []
+        }
+    }
+
+    componentDidMount() {
+        this.setState({loading: true});
+        fetch("https://swapi.co/api/people/")
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    loading: false,
+                    peopleArray: data.results
+                })
+            })
+
+    }
+
     render() {
-        const job = {
-            suiteName: "Suite Name",
-            environment: "Environment",
-            jobName: "Job Name",
-            date: "Date",
-            totalDuration: "Total Duration",
-            totalTests: "Total JobComponent",
-            passedTests: "Passed JobComponent",
-            failedTests: "Failed JobComponent",
-            percentPassed: "Percent Passed"
-        };
+        const jobComponent = this.state.loading ? "loading..." : this.state.peopleArray.map(item =>
+            <JobComponent key={item.name} character={item} />);
 
         return (
-            <JobComponent job={job}/>
+            <div>
+                {jobComponent}
+            </div>
+
         )
     }
 }
