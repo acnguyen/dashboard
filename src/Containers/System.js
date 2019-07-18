@@ -1,9 +1,11 @@
 import React from 'react';
+import SystemComponent from "../Components/SystemComponent";
 
 class System extends React.Component {
+
     render() {
         return (
-            <h1> Job Container</h1>
+            <SystemComponent system={{systemName: "SystemComponent Name"}}/>
         )
     }
 }
