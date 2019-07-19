@@ -3,7 +3,7 @@ import './App.css';
 import PieChart from './Containers/PieChart';
 import LineGraph from './Containers/LineGraph';
 import Test from "./Containers/Test";
-import Job from "./Containers/Job"
+import JobTable from "./Containers/JobTable"
 import System from "./Containers/System";
 
 
@@ -20,7 +20,7 @@ function App() {
                 </div>
             </div>
             <div className={"tableContainer"}>
-                <Job />
+                <JobTable />
                 <Test />
             </div>
         </div>

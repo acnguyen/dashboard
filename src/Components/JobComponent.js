@@ -10,15 +10,15 @@ function JobComponent(props) {
     const columns = [{
         title: 'Name', dataIndex: 'name', key:'name', width: 100,
     }, {
-        title: 'Height', dataIndex: 'Height', key:'Height', width: 100,
+        title: 'Height', dataIndex: 'height', key:'height', width: 100,
     }, {
-        title: 'Mass', dataIndex: 'Mass', key:'Mass', width: 200,
+        title: 'Mass', dataIndex: 'mass', key:'mass', width: 200,
     }, {
-        title: 'Hair_color', dataIndex: 'Hair_color', key:'Hair_color',
+        title: 'Hair_color', dataIndex: 'hair_color', key:'hair_color',
     }];
 
     const data = [
-        { name: props.character.name, age: 28, address: 'some where', key:'1' },
+        { name: props.character.name, height: props.character.height, address: 'some where', key:'1' },
 
     ];
 
@@ -36,7 +36,6 @@ function JobComponent(props) {
 
     return (
         <div>
-            <p>{props.character.name}</p>
             <Table columns={columns} data={data} components={components} />
         </div>
     );
