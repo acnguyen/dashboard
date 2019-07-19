@@ -77,8 +77,8 @@ class JobTable extends React.Component {
     }
 
     render() {
-        const jobComponent = this.state.loading ? "loading..." : this.state.peopleArray.map(item =>
-            <JobComponent key={item.name} character={item} />);
+        /*const jobComponent = this.state.loading ? "loading..." : this.state.peopleArray.map(item =>
+            <JobComponent key={item.name} character={item} />);*/
 
         return (
             <div>
